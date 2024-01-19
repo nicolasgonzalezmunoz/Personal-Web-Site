@@ -1,0 +1,24 @@
+.bg-dark-blue{
+    background-color: hsl(240, 100%, 5%);
+}
+.bg-light-blue{
+    background-color: hsl(240, 100%, 60%);
+}
+.bg-dark-pink{
+    background-color: hsl(300, 50%, 30%);
+}
+.bg-light-pink{
+    background-color: hsl(300, 70%, 60%);
+}
+.bg-dark-red{
+    background-color: hsl(0, 60%, 5%);
+}
+.bg-dark-orange{
+    background-color: hsl(30, 100%, 20%);
+}
+.bg-dark-green{
+    background-color: hsl(120, 100%, 10%);
+}
+.bg-dark-gray{
+    background-color: hsl(0, 0%, 15%);
+}
