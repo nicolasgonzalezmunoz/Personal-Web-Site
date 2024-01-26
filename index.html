@@ -16,20 +16,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/switch_theme.js"></script>
     <title>Nicolás González</title>
 </head>
-<body class="bg-primary-subtle">
+<body class="text-body bg-main">
     <!--Nav bar-->
-    <nav class="navbar sticky-top navbar-expand-lg bg-dark-pink text-white">
+    <nav class="navbar sticky-top navbar-expand-lg bg-nav text-title px-4">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3 px-5" href="#">
+            <a class="navbar-brand fw-bold fs-3" href="#">
                 Nicolás González
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end fs-5" id="navbarToggler">
+            <div class="collapse navbar-collapse navbar-nav-scroll fs-5 justify-content-end" id="navbarToggler">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn fs-5" aria-live="polite" title="Toggles light & dark"
+                        type="button" data-theme-toggle aria-label="Change to light theme" aria-hidden="true" id="switch-theme-button">
+                            <i class="fa-solid fa-moon" id="switch-theme-icon"></i>
+                        </button>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -61,8 +68,8 @@
     <!--Main body-->
     <main>
         <!--About me-->
-        <section class="container-fluid text-white justify-content-center my-2">
-            <div class="row px-5">
+        <section class="container-fluid text-title justify-content-center py-4">
+            <div class="row">
                 <div class="col-12 col-lg-4">
                     <img width="90%" src="assets/imgs/profile-photo.png" alt="Profile Photo">
                 </div>
@@ -73,7 +80,7 @@
             </div>
         </section>
         <!--Showcase-->
-        <section class="container-fluid text-white bg-dark-orange justify-content-center my-2 py-2 px-5">
+        <section class="container-fluid bg-emphasis justify-content-center text-title py-2">
             <div class="row">
                 <div class="col-12 col-lg-4 px-2">
                     <p class="fs-4 text-center"><i class="fa-solid fa-graduation-cap"></i> Continuous Learning</p>
@@ -89,63 +96,63 @@
                 </div>
             </div>
         </section>
-        <section class="container justify-content-center my-4">
-            <p class="fs-1 text-center text-white">Featured Projects</p>
-            <div class="row">
-                <div class="col-12 col-lg-4">
+        <section class="container-fluid justify-content-center py-2">
+            <p class="fs-1 py-2 text-center text-title">Featured Projects</p>
+            <div class="row m-1">
+                <div class="col-12 col-lg-4 py-2">
                     <div class="card">
                         <a href="https://www.kaggle.com/code/nicolasgonzalezmunoz/underfitting-overfitting-and-regularization/notebook" target="_blank">
                             <img class="card-img-top" src="assets/imgs/overfitting-project.png" alt="Underfitting, Overfitting and Regularization screenshot">
                         </a>
-                        <div class="card-body bg-dark-green">
-                            <p class="card-title fs-4 text-white">Underfitting, Overfitting and Regularization
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Underfitting, Overfitting and Regularization
                             </p>
                             <p class="card-text fs-5">Are you new to machine learning? On this project you will learn about the most common techniques used on model validation. You will also get an introduction to Optuna for hyper-parameter tuning.</p>
                             <p class="text-center">
-                                <a href="https://www.kaggle.com/code/nicolasgonzalezmunoz/underfitting-overfitting-and-regularization/notebook" target="_blank" class="btn btn-primary">Go to project</a>
+                                <a href="https://www.kaggle.com/code/nicolasgonzalezmunoz/underfitting-overfitting-and-regularization/notebook" target="_blank" class="btn btn-danger">Go to project</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 py-2">
                     <div class="card">
                         <a href="https://www.kaggle.com/code/nicolasgonzalezmunoz/cross-validation-dataset-split-strategies" target="_blank">
                             <img src="assets/imgs/split-project.png" alt="Cross-validation: dataset split strategies screenshot" class="card-img-top">
                         </a>
-                        <div class="card-body bg-dark-green">
-                            <p class="card-title fs-4 text-white">Cross-validation: dataset split strategies</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Cross-validation: dataset split strategies</p>
                             <p class="card-text fs-5">If you wonder which is the best strategy to split your data, this project will teach you the best strategy for your use case, be it time series forecasting, classification or something else.</p>
-                            <p class="text-center"><a href="https://www.kaggle.com/code/nicolasgonzalezmunoz/cross-validation-dataset-split-strategies" target="_blank" class="btn btn-primary">Go to project</a></p>
+                            <p class="text-center"><a href="https://www.kaggle.com/code/nicolasgonzalezmunoz/cross-validation-dataset-split-strategies" target="_blank" class="btn btn-danger">Go to project</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 py-2">
                     <div class="card">
                         <a href="https://www.kaggle.com/datasets/nicolasgonzalezmunoz/world-bank-world-development-indicators" target="_blank" class="card-link">
                             <img src="assets/imgs/world-bank-dataset.png" alt="World Bank World Development Indicators screenshot" class="card-img-top" width="100%">
                         </a>
-                        <div class="card-body bg-dark-green">
-                            <p class="card-title text-white fs-4">World Bank World Development Indicators</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">World Bank World Development Indicators</p>
                             <p class="card-text fs-5">If you work on economy, this dataset is for you. Explore the main development indicators from several countries, extracted from a source as reputable as the World Bank can be.</p>
-                            <p class="text-center"><a href="https://www.kaggle.com/datasets/nicolasgonzalezmunoz/world-bank-world-development-indicators" target="_blank" class="btn btn-primary">Go to project</a></p>
+                            <p class="text-center"><a href="https://www.kaggle.com/datasets/nicolasgonzalezmunoz/world-bank-world-development-indicators" target="_blank" class="btn btn-danger">Go to project</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="container justify-content-center my-4">
-            <p class="fs-1 text-center text-white">Featured Certifications</p>
+        <section class="container-fluid justify-content-center py-2">
+            <p class="fs-1 text-center text-title">Featured Certifications</p>
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="card">
                         <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank">
                             <img src="assets/imgs/data-codecamp-cert.png" alt="Data Analysis FreeCodeCamp Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-dark-green">
-                            <p class="card-title fs-4">Data Analysis with Python</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Data Analysis with Python</p>
                             <p class="card-subtitle text-body-secondary fs-5 mb-2">FreeCodeCamp</p>
                             <p class="card-text"></p>
-                            <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank" class="btn btn-primary">See certification</a></p>
+                            <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
                     </div>
                 </div>
@@ -154,11 +161,11 @@
                         <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank">
                             <img src="assets/imgs/ml-codecamp-cert.png" alt="Machine Learning FreeCodeCamp Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-dark-green">
-                            <p class="card-title fs-4">Machine Learning with Python</p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">FreeCodeCamp</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Machine Learning with Python</p>
+                            <p class="card-subtitle fs-5 mb-2">FreeCodeCamp</p>
                             <p class="card-text"></p>
-                            <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank" class="btn btn-primary">See certification</a></p>
+                            <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
                     </div>
                 </div>
@@ -167,18 +174,18 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank">
                             <img src="assets/imgs/adv-sql-kaggle-cert.png" alt="Advanced SQL Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-dark-green">
-                            <p class="card-title fs-4">Advanced SQL</p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Advanced SQL</p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
-                            <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank" class="btn btn-primary">See certification</a></p>
+                            <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="container-fluid bg-dark-gray text-center py-2 fs-5 mt-3">
+    <footer class="container-fluid bg-footer text-center py-2 fs-5 text-title">
         <span class="my-2">Nicolás González. Data Science for everyone.</span>
     </footer>
 </body>

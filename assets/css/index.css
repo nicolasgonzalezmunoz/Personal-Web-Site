@@ -1,24 +1,78 @@
-.bg-dark-blue{
-    background-color: hsl(240, 100%, 5%);
+.bg-nav-dark{
+    background-color: hsl(277, 100%, 40%);
 }
-.bg-light-blue{
+.bg-purple-dark{
+    background-color: hsl(277, 100%, 43%);
+}
+.bg-footer-dark{
     background-color: hsl(240, 100%, 60%);
 }
-.bg-dark-pink{
-    background-color: hsl(300, 50%, 30%);
+.bg-emphasis-dark{
+    background-color: hsl(105, 100%, 20%);
 }
-.bg-light-pink{
-    background-color: hsl(300, 70%, 60%);
+.bg-yellow-dark{
+    background-color: hsl(55, 100%, 25%);
 }
-.bg-dark-red{
-    background-color: hsl(0, 60%, 5%);
+.bg-gray-dark{
+    background-color: hsl(0, 0%, 30%);
 }
-.bg-dark-orange{
-    background-color: hsl(30, 100%, 20%);
+.bg-main-dark{
+    background-color: hsl(270, 100%, 20%);
 }
-.bg-dark-green{
-    background-color: hsl(120, 100%, 10%);
+
+
+.bg-nav-light{
+    background-color: hsl(236, 100%, 68%);
 }
-.bg-dark-gray{
-    background-color: hsl(0, 0%, 15%);
+.bg-purple-light{
+    background-color: hsl(277, 100%, 63%);
+}
+.bg-footer-light{
+    background-color: hsl(235, 100%, 79%);
+}
+.bg-emphasis-light{
+    background-color: hsl(107, 100%, 40%);
+}
+.bg-yellow-light{
+    background-color: hsl(55, 100%, 70%);
+}
+.bg-gray-light{
+    background-color: hsl(0, 0%, 75%);
+}
+.bg-main-light{
+    background-color: hsl(261, 100%, 73%);
+}
+
+
+
+
+[data-bs-theme="dark"] {
+    --bg-main: hsl(270, 100%, 20%);
+    --bg-nav: hsl(277, 100%, 40%);
+    --bg-emphasis: hsl(105, 100%, 20%);
+    --bg-footer: hsl(240, 100%, 60%);
+    --text-title: rgb(255, 255, 255);
+    --text-body: rgb(222, 226, 230);
+}
+
+[data-bs-theme="light"] {
+    --bg-main: hsl(261, 100%, 73%);
+    --bg-nav: hsl(236, 100%, 68%);
+    --bg-emphasis: hsl(107, 100%, 40%);
+    --bg-footer: hsl(235, 100%, 79%);
+    --text-title: rgb(0, 0, 0);
+    --text-body: rgb(33, 29, 25);
+}
+
+.bg-main{
+    background-color: var(--bg-main);
+}
+.bg-nav{
+    background-color: var(--bg-nav);
+}
+.bg-emphasis{
+    background-color: var(--bg-emphasis);
+}
+.bg-footer{
+    background-color: var(--bg-footer);
 }
