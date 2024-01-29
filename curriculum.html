@@ -10,16 +10,18 @@
     <link rel="icon" id="favicon-apple" type="image/png" href="assets/favicon/apple-touch-icon-dark.png" sizes="180x180">
     <link rel="icon" id="favicon192" type="image/png" href="assets/favicon/android-chrome-192x192-dark.png" sizes="192x192">
     <link rel="icon" id="favicon512" type="image/png" href="assets/favicon/android-chrome-512x512-dark.png" sizes="512x512">
+    <title>Curriculum - Nicolás González</title>
     <!--CSS files-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/scripts/switch-theme.js"></script>
-    <title>Curriculum - Nicolás González</title>
+    <script src=" https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js "></script>
+    <script src="assets/scripts/settings.js"></script>
 </head>
 <body class="text-body bg-main">
+    <button class="btn btn-position btn-style scroll-to-top" id="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button> 
     <!--Nav bar-->
     <nav class="navbar sticky-top navbar-expand-lg bg-nav text-title px-4">
         <div class="container-fluid">
@@ -38,16 +40,48 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <div class="dropdown dropdown-toggle-split bg-nav">
+                            <button class="btn dropdown-toggle bg-nav fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-language"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+
+                                <li class="dropdown-header fs-6" lang="en">Current Language</li>
+                                <li class="dropdown-header fs-6" lang="es">Idioma Actual</li>
+
+                                <li id="current-lang" class="dropdown-item" lang="en">English</li>
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li class="dropdown-header fs-6" lang="en">Choose Language</li>
+                                <li class="dropdown-header fs-6" lang="es">Seleccionar Idioma</li>
+
+                                <li id="lang-en" role="button" class="btn dropdown-item"">English</li>
+                                <li id="lang-es" role="button" class="btn dropdown-item">Español</li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link active" aria-current="page" href="index.html" lang="en">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html" lang="es">Inicio</a>
+
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Curriculum</a>
                     </li>
                     <li class="nav.item">
-                        <a class="nav-link active" href="projects.html">Projects</a>
+
+                        <a class="nav-link active" href="projects.html" lang="en">Projects</a>
+                        <a class="nav-link active" href="projects.html" lang="es">Proyectos</a>
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="certifications.html">Certifications</a>
+
+                        <a class="nav-link active" href="certifications.html" lang="en">Certifications</a>
+                        <a class="nav-link active" href="certifications.html" lang="es">Certificaciones</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="https://www.linkedin.com/in/nicolas-gonzalezmu/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -83,130 +117,239 @@
                     <p class="fs-5">
                         Email: nicolas.gonzalez.m97@gmail.com
                     </p>
-                    <p class="fs-5">
+
+                    <p class="fs-5" lang="en">
                         Mobile: +56 9 766 10 245
                     </p>
+                    <p class="fs-5" lang="es">
+                        Teléfono: +56 9 766 10 245
+                    </p>
+
                 </div>
             </div>
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-title">
-                Experience
-            </p>
+            <p class="fs-2 text-center text-title" lang="en">Experience</p>
+            <p class="fs-2 text-center text-title" lang="es">Experiencia</p>
+
             <div>
                 <div class="row">
+
                     <div class="col-12 col-lg-8 fs-5">
-                        <p class="fw-bold">Machine Learning Engineer</p>
+
+                        <p class="fw-bold" lang="en">Machine Learning Engineer</p>
+                        <p class="fw-bold" lang="es">Ingeniero Machine Learning</p>
+
+
                         <p>Servicios MECFIN Limitada</p>
+
                     </div>
                     <div class="col-12 col-lg-4 fs-5 text-end">
-                        <p class="fw-bold">Chile (Remote)</p>
-                        <p>Aug 2023 - Sep 2023</p>
+
+                        <p class="fw-bold" lang="en">Chile (Remote)</p>
+                        <p lang="en">Aug 2023 - Sep 2023</p>
+
+                        <p class="fw-bold" lang="es">Chile (Remoto)</p>
+                        <p lang="es">Ago 2023 - Sep 2023</p>
+
                     </div>
+
                 </div>
                 <ul>
                     <li>
-                        <p><span class="fw-bold">Develop</span> a Question-Answering (QA) model using Large Language Models (LLMs) and Retrieval Augmented
-                        Generation (RAG).</p>
+
+                        <p lang="en"><span class="fw-bold">Develop</span> a Question-Answering (QA) model using Large Language Models (LLMs) and Retrieval Augmented Generation (RAG).</p>
+
+                        <p lang="es"><span class="fw-bold">Desarrollar</span> un modelo Question-Answering (QA) usando Large Language Models (LLMs) y Retrieval Augmented Generation (RAG).</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Design</span> a vector database to store scientific articles extracted from Arxiv and the local files.</p>
+
+                        <p lang="en"><span class="fw-bold">Design</span> a vector database to store scientific articles extracted from Arxiv and the local files.</p>
+
+                        <p lang="es"><span class="fw-bold">Diseñar</span> una base de datos de vectores para almacenar artículos científicos extraídos de Arxiv y los archivos locales.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Engineer</span> a prompt to reduce hallucinations and get answers in the desired format.</p>
+
+                        <p lang="en"><span class="fw-bold">Engineer</span> a prompt to reduce hallucinations and get answers in the desired format.</p>
+
+                        <p lang="es"><span class="fw-bold">Crear</span> un prompt para reducir alucinaciones y obtener respuestas en el formato deseado.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Integrate</span> the elements mentioned above into a chain that mitigates some common issues on Large Language
-                        Models (LLMs), like “lost in the middle”, using the LangChain framework.</p>
+                        <p lang="en"><span class="fw-bold">Integrate</span> the elements mentioned above into a chain that mitigates some common issues on Large Language Models (LLMs), like “lost in the middle”, using the LangChain framework.</p>
+
+                        <p lang="es"><span class="fw-bold">Integrar</span> los elementos antes mencionados en una cadena que mitigue problemas comunes de los LLMs, tales como "pérdido en la mitad", utilizando el framework LangChain.</p>
                     </li>
                 </ul>
             </div>
             <div>
                 <div class="row">
                     <div class="col-12 col-lg-8 fs-5">
-                        <p class="fw-bold">Data Scientist</p>
+
+                        <p lang="en" class="fw-bold">Data Scientist</p>
+                        <p lang="es" class="fw-bold">Científico de Datos</p>
+
                         <p>Duke University</p>
                     </div>
                     <div class="col-12 col-lg-4 fs-5 text-end">
-                        <p class="fw-bold">United States(Remote)</p>
+
+                        <p class="fw-bold" lang="en">United States(Remote)</p>
+                        <p class="fw-bold" lang="es">Estados Unidos (Remoto)</p>
+
                         <p>Mar 2021 - May 2022</p>
                     </div>
                 </div>
                 <ul>
                     <li>
-                        <p><span class="fw-bold">Extract and process</span> data from Excel and csv files.</p>
+
+                        <p lang="en"><span class="fw-bold">Extract and process</span> data from Excel and csv files.</p>
+
+                        <p lang="es"><span class="fw-bold">Extraer y procesar</span> provenientes de archivos Excel y csv.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Transform</span> relational data into graph networks and compute the centrality metrics of each node using the networkx library.</p>
+
+                        <p lang="en"><span class="fw-bold">Transform</span> relational data into graph networks and compute the centrality metrics of each node using the networkx library.</p>
+
+                        <p lang="es"><span class="fw-bold">Transformar</span> datos relacionaler en redes de grafos y calcular métricas de centralidad de cada nodo usando la librería networkx.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Analyze</span> relationships between features and explore the dataset through visualizations.</p>
+
+                        <p lang="en"><span class="fw-bold">Analyze</span> relationships between features and explore the dataset through visualizations.</p>
+
+                        <p lang="es"><span class="fw-bold">Analizar</span> relaciones entre variables y explorar el conjunto de datos mediante el uso de visualizaciones.</p>
+
                     </li>
                     <li>
                         <p><span class="fw-bold">Engineer</span> new features based on the relationships found and the metrics computed.</p>
                     </li>
                     <li>
-                        <p><span class="fw-bold">Reduce</span> the complexity of the problem by applying statistical and dimensionality reduction techniques.</p>
+
+                        <p lang="en"><span class="fw-bold">Reduce</span> the complexity of the problem by applying statistical and dimensionality reduction techniques.</p>
+
+                        <p lang="es"><span class="fw-bold">Reducir</span> la complejidad del problema aplicando técnicas estadísticas y de reducción de dimensionalidad.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Develop</span> a machine learning model for time series forecasting using the previous findings.</p>
+
+                        <p lang="en"><span class="fw-bold">Develop</span> a machine learning model for time series forecasting using the previous findings.</p>
+
+                        <p lang="es"><span class="fw-bold">Desarrollar</span> un modelo de aprendizaje de máquina para la predicción de series de tiempo usando los hallazgos previos.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Report and discuss</span> the main findings and conclusions with the research team.</p>
+
+                        <p lang="en"><span class="fw-bold">Report and discuss</span> the main findings and conclusions with the research team.</p>
+
+                        <p lang="es"><span class="fw-bold">Reportar y discutir</span> los principales hallazgos y conclusiones con el equipo de investigación.</p>
+
                     </li>
                 </ul>
-                <p>
-                    Achieved to reduce the number of features from 31 to 8 whithout a significant performance loss, where the trained machine-learning model reached a R2 score of around 0.7.
+
+                <p lang="en">
+                    Achieved to reduce the number of features from 31 to 8 whithout a significant performance loss, where the trained machine-learning model reached a \(R^2\) score of around 0.7.
                 </p>
+
+                <p lang="es">
+                    Se logró reducir el número de variables de 31 a 8 sin una pérdida significativa de desempeño, entrenando un modelo de aprendizaje de máquina que alcanza un coeficiente \(R^2\) de aproximadamente 0.7.
+                </p>
+
             </div>
             <div>
                 <div class="row">
                     <div class="col-12 col-lg-8 fs-5">
-                        <p class="fw-bold">Mathematical Modeller</p>
-                        <p>UNAM</p>
+
+                        <p class="fw-bold" lang="en">Mathematical Modeller</p>
+                        <p class="fw-bold" lang="es">Modelador Matemático</p>
+
+                        <p>Universidad Nacional Autónoma de México (UNAM)</p>
                     </div>
                     <div class="col-12 col-lg-4 fs-5 text-end">
-                        <p class="fw-bold">México (Remote)</p>
-                        <p>Sep 2020 - Ene 2021</p>
+
+                        <p class="fw-bold" lang="en">México (Remote)</p>
+                        <p lang="en">Sep 2020 - Jan 2021</p>
+
+                        <p class="fw-bold" lang="es">México (Remoto)</p>
+                        <p lang="es">Sep 2020 - Ene 2021</p>
+
                     </div>
                 </div>
                 <ul>
                     <li>
-                        <p><span class="fw-bold">Develop and evaluate</span> mathematical models of interactions varied in nature.</p>
+
+                        <p lang="en"><span class="fw-bold">Develop and evaluate</span> mathematical models of interactions varied in nature.</p>
+
+                        <p lang="es"><span class="fw-bold">Desarrollar y evaluar</span> modelos matemáticos de interacciones de naturaleza variada.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Analyze</span> the mathematical properties of the developed models: existence of equilibrium points and bifurcations, stability analysis, qualitative analysis, between others.</p>
+
+                        <p lang="en"><span class="fw-bold">Analyze</span> the mathematical properties of the developed models: existence of equilibrium points and bifurcations, stability analysis, qualitative analysis, between others.</p>
+
+                        <p lang="es"><span class="fw-bold">Analizar</span> las propiedades matemáticas de los modelos desarrollados: existencia de puntos de equilibrio y bifurcaciones, análisis de estabilidad, análisis cualitativo, entre otros.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Adjust</span> the parameters of each model using experimental data and programming code on MATLAB.</p>
+
+                        <p lang="en"><span class="fw-bold">Adjust</span> the parameters of each model using experimental data and programming code on MATLAB.</p>
+
+                        <p lang="es"><span class="fw-bold">Ajustar</span> los parámetros de cada modelo usando datos experimentales y programación de código en MATLAB.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Produce</span> visualizations of the trajectories of the systems, as well as their qualitative behavior.</p>
+
+                        <p lang="en"><span class="fw-bold">Produce</span> visualizations of the trajectories of the systems, as well as their qualitative behavior.</p>
+
+                        <p lang="es"><span class="fw-bold">Producir</span> visualizaciones de trayectorias de los sistemas, así como de su coportamiento cualitativo.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Design</span> control strategies to lead the systems to a desired result.</p>
+
+                        <p lang="en"><span class="fw-bold">Design</span> control strategies to lead the systems to a desired result.</p>
+
+                        <p lang="es"><span class="fw-bold">Diseñar</span> estrategias de control que conduzcan al sistema al resultado deseado.</p>
+
                     </li>
                     <li>
-                        <p><span class="fw-bold">Summarize</span> the analysis and conclusions and present them to the supervisor.</p>
+
+                        <p lang="en"><span class="fw-bold">Summarize</span> the analysis and conclusions and present them to the supervisor.</p>
+
+                        <p lang="es"><span class="fw-bold">Resumir</span> el análisis y conclusiones y presentarlos al supervisor.</p>
+
                     </li>
                 </ul>
-                <p>
-                    The work developed led to the writing of a scientific article, which is currently published on Ecological Modelling: <a href="https://doi.org/10.1016/j.ecolmodel.2023.110449" target="_blank" class="link-info">https://doi.org/10.1016/j.ecolmodel.2023.110449</a>
+
+                <p lang="en">
+                    The work developed led to the writing of a scientific article, which is currently published on Ecological Modelling: <a href="assets/docs/article-unam.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> <a href="https://doi.org/10.1016/j.ecolmodel.2023.110449" target="_blank" class="link-info">https://doi.org/10.1016/j.ecolmodel.2023.110449</a>
                 </p>
+
+                <p lang="es">
+                    El trabajo desempeñado condujo a la redacción de un artículo científico actualmente publicado en Ecological Modelling: <a href="assets/docs/article-unam.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> <a href="https://doi.org/10.1016/j.ecolmodel.2023.110449" target="_blank" class="link-info">https://doi.org/10.1016/j.ecolmodel.2023.110449</a>
+                </p>
+
             </div>
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-title">Education</p>
+
+            <p class="fs-2 text-center text-title" lang="en">Education</p>
+            <p class="fs-2 text-center text-title" lang="es">Educación</p>
+
             <div>
                 <div class="row">
                     <div class="col-12 col-lg-8 fs-5">
-                        <p class="fw-bold">Universidad Técnica Federico Santa Marı́a</p>
-                        <p class="fst-italic">Master of Science in Mathematics; Cumulative Average: 90/100 (6.3/7.0)</p>
+                        <p class="fw-bold">Universidad Técnica Federico Santa María</p>
+
+                        <p class="fst-italic" lang="en">Master of Science in Mathematics; Cumulative Average: 90/100 (6.3/7.0)</p>
+                        <p class="fst-italic" lang="es">Magíster en Ciencias, Mención Matemática; Promedio Acumulado: 90/100 (6.3/7.0)</p>
+
                     </div>
                     <div class="col-12 col-lg-4 fs-5 text-end">
-                        <p>Valparaı́so, Chile</p>
+                        <p>Valparaíso, Chile</p>
                         <p class="fst-italic">Mar 2021 - Mar 2022</p>
                     </div>
                 </div>
@@ -214,11 +357,19 @@
             <div>
                 <div class="row">
                     <div class="col-12 col-lg-8 fs-5">
-                        <p class="fw-bold">Universidad Técnica Federico Santa Marı́a</p>
-                        <p class="fst-italic">Bachelor of Civil Engineering in Mathematics; Cumulative Average: 79/100 (5.7/7.0)</p>
+                        <p class="fw-bold">Universidad Técnica Federico Santa María</p>
+
+                        <p class="fst-italic" lang="en">Bachelor of Civil Engineering in Mathematics; Cumulative Average: 79/100 (5.7/7.0)</p>
+                        <p lang="en">Thesis: <span class="fst-italic"><a href="assets/docs/tesis-master.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> Existence of solutions of some fractional problems.</span></p>
+                        <p lang="es">Tésis: <span class="fst-italic"><a href="assets/docs/tesis-master.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> Existencia de soluciones para algunos problemas fraccionarios.</span></p>
+
+                        <p class="fst-italic" lang="es">Ingeniería Civil Matemática; Promedio Acumulado: 79/100 (5.7/7.0)</p>
+                        <p lang="en">Thesis: <span class="fst-italic"><a href="assets/docs/tesis-master.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> Existence of solutions of some fractional problems.</span></p>
+                        <p lang="es">Tésis: <span class="fst-italic"><a href="assets/docs/tesis-master.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> Existencia de soluciones para algunos problemas fraccionarios.</span></p>
+
                     </div>
                     <div class="col-12 col-lg-4 fs-5 text-end">
-                        <p>Valparaı́so, Chile</p>
+                        <p>Valparaíso, Chile</p>
                         <p class="fst-italic">Mar 2015 - Mar 2022</p>
                     </div>
                 </div>
@@ -226,10 +377,14 @@
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-title">Knowledge & Skills</p>
-            <p class="fs-4">Machine Learning Models</p>
+
+            <p class="fs-2 text-center text-title" lang="en">Knowledge & Skills</p>
+            <p class="fs-2 text-center text-title" lang="es">Conocimientos y Habilidades</p>
+
+            <p class="fs-4" lang="en">Machine Learning Models</p>
+            <p class="fs-4" lang="es">Modelos de Aprendizaje de Máquina</p>
             <div class="container">
-                <p>
+                <p lang="en">
                     <span class="badge fs-5 m-1 text-bg-success">Linear Models</span>
                     <span class="badge fs-5 m-1 text-bg-success">Support Vector Machines</span>
                     <span class="badge fs-5 m-1 text-bg-success">Decision Trees</span>
@@ -248,10 +403,35 @@
                     <span class="badge fs-5 m-1 text-bg-success">Recurrent Neural Networks</span>
                     <span class="badge fs-5 m-1 text-bg-success">Large Language Models</span>
                 </p>
+
+                <p lang="es">
+                    <span class="badge fs-5 m-1 text-bg-success">Modelos Lineales</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Máquinas de Soporte Vectorial</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Árboles de Decisión</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Bosques Aleatorios</span>
+                    <span class="badge fs-5 m-1 text-bg-success">AdaBoost</span>
+                    <span class="badge fs-5 m-1 text-bg-success">XGBoost</span>
+                    <span class="badge fs-5 m-1 text-bg-success">CatBoost</span>
+                    <span class="badge fs-5 m-1 text-bg-success">LightGBM</span>
+                    <span class="badge fs-5 m-1 text-bg-success">ARIMA</span>
+                    <span class="badge fs-5 m-1 text-bg-success">K Nearest Neighbors</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Spectral Clustering</span>
+                    <span class="badge fs-5 m-1 text-bg-success">DBSCAN</span>
+                    <span class="badge fs-5 m-1 text-bg-success">HDBSCAN</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Redes Neuronales Profundas</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Redes Convolucionales</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Redes Neuronales Recurrentes</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Large Language Models</span>
+                </p>
+
             </div>
-            <p class="fs-4">Statistics</p>
+
+            <p class="fs-4" lang="en">Statistics</p>
+            <p class="fs-4" lang="es">Estadística</p>
+
             <div class="container">
-                <p>
+
+                <p lang="en">
                     <span class="badge fs-5 m-1 text-bg-success">Descriptive Statistics</span>
                     <span class="badge fs-5 m-1 text-bg-success">Inference</span>
                     <span class="badge fs-5 m-1 text-bg-success">Probability</span>
@@ -262,10 +442,26 @@
                     <span class="badge fs-5 m-1 text-bg-success">Stochastic Processes</span>
                     <span class="badge fs-5 m-1 text-bg-success">Time Series</span>
                 </p>
+
+                <p lang="es">
+                    <span class="badge fs-5 m-1 text-bg-success">Estadística Descriptiva</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Inferencia</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Probabilidad</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Distribuciones</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Intervalos de Confianza</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Test de Hipótesis</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Optimización Bayesiana</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Procesos Estocásticos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Series de Tiempo</span>
+                </p>
+
             </div>
-            <p class="fs-4">Machine Learning Techniques</p>
+
+            <p class="fs-4" lang="en">Machine Learning Techniques</p>
+            <p class="fs-4" lang="es">Técnicas de Aprendizaje de Máquina</p>
+
             <div class="container">
-                <p>
+                <p lang="en">
                     <span class="badge fs-5 m-1 text-bg-success">Regression</span>
                     <span class="badge fs-5 m-1 text-bg-success">Classification</span>
                     <span class="badge fs-5 m-1 text-bg-success">Clustering</span>
@@ -284,10 +480,35 @@
                     <span class="badge fs-5 m-1 text-bg-success">Model Selection</span>
                     <span class="badge fs-5 m-1 text-bg-success">Feature Importance</span>
                 </p>
+
+                <p lang="es">
+                    <span class="badge fs-5 m-1 text-bg-success">Regresión</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Clasificación</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Clustering</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Detección de Anomalías</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Ingeniería de Variables</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Selección de Variables</span>
+                    <span class="badge fs-5 m-1 text-bg-success"></span>
+                    <span class="badge fs-5 m-1 text-bg-success">Visualización de Datos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Limpieza de Datos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Explicabilidad de Modelos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Transferencia de Aprendizaje</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Afinación de Modelos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Afinación de Hipe-parámetros</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Regularización de Modelos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Validación Cruzada</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Selección de Modelos</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Importancia de Variables</span>
+                </p>
+
             </div>
-            <p class="fs-4">Programming Languages and Technologies</p>
+
+            <p class="fs-4" lang="en">Programming Languages and Technologies</p>
+            <p class="fs-4" lang="es">Tecnologías y Lenguajes de Programación</p>
+
             <div class="container">
-                <p>
+
+                <p lang="en">
                     <span class="badge fs-5 m-1 text-bg-success">Python</span>
                     <span class="badge fs-5 m-1 text-bg-success">SQL</span>
                     <span class="badge fs-5 m-1 text-bg-success">MATLAB</span>
@@ -302,8 +523,28 @@
                     <span class="badge fs-5 m-1 text-bg-success">Dash</span>
                     <span class="badge fs-5 m-1 text-bg-success">Bootstrap</span>
                 </p>
+
+                <p lang="es">
+                    <span class="badge fs-5 m-1 text-bg-success">Python</span>
+                    <span class="badge fs-5 m-1 text-bg-success">SQL</span>
+                    <span class="badge fs-5 m-1 text-bg-success">MATLAB</span>
+                    <span class="badge fs-5 m-1 text-bg-success">HTML</span>
+                    <span class="badge fs-5 m-1 text-bg-success">CSS</span>
+                    <span class="badge fs-5 m-1 text-bg-success">JavaScript</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Git</span>
+                    <span class="badge fs-5 m-1 text-bg-success">GitHub</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Linux</span>
+                    <span class="badge fs-5 m-1 text-bg-success">MS Office</span>
+                    <span class="badge fs-5 m-1 text-bg-success">MS Power BI</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Dash</span>
+                    <span class="badge fs-5 m-1 text-bg-success">Bootstrap</span>
+                </p>
+
             </div>
-            <p class="fs-4">Python's Data Science Libraries</p>
+
+            <p class="fs-4" lang="en">Python's Data Science Libraries</p>
+            <p class="fs-4" lang="es">Librerías de Python para Ciencia de Datos</p>
+
             <div class="container">
                 <p>
                     <span class="badge fs-5 m-1 text-bg-success">Numpy</span>
@@ -332,34 +573,74 @@
                     <span class="badge fs-5 m-1 text-bg-success">LightGBM</span>
                 </p>
             </div>
-            <p class="fs-4">Languages</p>
+
+            <p class="fs-4" lang="en">Languages</p>
+            <p class="fs-4" lang="es">Idiomas</p>
+
             <div class="container"></div>
-            <p>
+
+            <p lang="en">
                 <span class="badge fs-5 m-1 text-bg-success">Spanish: Native</span>
                 <span class="badge fs-5 m-1 text-bg-success">English: C1</span>
             </p>
+
+            <p lang="es">
+                <span class="badge fs-5 m-1 text-bg-success">Español: Nativo</span>
+                <span class="badge fs-5 m-1 text-bg-success">Inglés: C1</span>
+            </p>
+
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-title">Certifications</p>
+
+            <p class="fs-2 text-center text-title" lang="en">Certifications</p>
+            <p class="fs-2 text-center text-title" lang="es">Certificaciones</p>
+
             <ul class="fs-5">
                 <li>
-                    <a href="assets/docs/ielts-results.pdf" target="_blank"><i class="fas fa-file-pdf link-info"></i></a> IELTS Academic, Score: 7.0 (CEFR Level C1).
+                    <span>
+                        <a href="assets/docs/ielts-results.pdf" target="_blank"><i class="fas fa-file-pdf link-info"></i></a> IELTS Academic, Score: 7.0 (CEFR Level C1).
+                    </span>
                 </li>
                 <li>
-                    <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a> Data Analysis with Python.
+
+                    <span lang="en">
+                        <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a> Data Analysis with Python.
+                    </span>
+
+                    <span lang="es">
+                        <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a> Análisis de Datos con Python.
+                    </span>
+
                 </li>
                 <li>
-                    <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a>Machine Learning with Python.
+                    <span lang="en">
+                        <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a>Machine Learning with Python.
+                    </span>
+
+                    <span lang="es">
+                        <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a>Apredizaje de Máquina con Python.
+                    </span>
+
                 </li>
                 <li>
-                    <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank"><i class="fas fa-link link-info"></i></a> Advanced SQL.
+
+                    <span lang="en">
+                        <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank"><i class="fas fa-link link-info"></i></a> Advanced SQL.
+                    </span>
+                    <span lang="es">
+                        <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank"><i class="fas fa-link link-info"></i></a> SQL Avanzado.
+                    </span>
+
                 </li>
             </ul>
         </section>
     </main>
     <footer class="container-fluid bg-footer text-center py-2 fs-5 mt-3">
-        <span class="my-2">Nicolás González. Data Science for everyone.</span>
+
+        <span class="my-2" lang="en">Nicolás González. Data Science for everyone.</span>
+        <span class="my-2" lang="es">Nicolás González. Ciencia de Datos para todos.</span>
+
     </footer>
 </body>
 </html>

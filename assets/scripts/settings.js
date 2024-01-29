@@ -65,8 +65,7 @@ function hideLangElements({lang}){
 }
 
 function hideNotLangElements({lang}){
-    console.log(lang);
-    const selector = "[lang]:not[lang='" + lang + "']";
+    const selector = "[lang]:not([lang='" + lang + "'])";
     const elements = document.querySelectorAll(selector);
     const nElements = elements.length;
     for (let i = 0; i < nElements; i++){
@@ -85,28 +84,40 @@ function showLangElements({lang}){
 
 
 function calculateLanguageSettings(){
+    langsList = ['en', 'es'];
     // Hide all content in spanish language
-    //$('[lang="es"]').hide();
-    hideLangElements({lang: 'es'});
+    currentLang = document.getElementById('current-lang');
+    document.documentElement.setAttribute("lang", 'en');
+    currentLang.setAttribute("lang", "en");
+    currentLang.innerHTML = "English";
+    hideNotLangElements({lang: 'en'});
+
+    // Get Storaged language (if any)
+    const selectedLang = localStorage.selectedLang;
 
     // Check user's preferred languages
     const langs = navigator.languages;
-    if (langs !== null){
+
+    if (selectedLang !== null){
+        setLang = selectedLang;
+    } else if (langs !== null){
         const nLangs = langs.length;
         for (let i = 0; i < nLangs; i++){
             let lang = langs[i].slice(0, 2);
-            if (lang === 'es'){
-                //$('[lang="en"]').toggle();
-                //$('[lang="es"]').toggle();
-                hideLangElements({lang: 'en'});
-                showLangElements({lang: 'es'});
-                currentLang = document.getElementById('current-lang');
-                currentLang.value = 'es';
-                currentLang.innerHTML = 'Español';
+            if (langsList.includes(lang)){
+                setLang = lang;
                 break;
             }
         }
+    } else {
+        setLang = "en";
     }
+    document.documentElement.setAttribute("lang", setLang);
+    currentLang.setAttribute("lang", setLang);
+    currentLang.innerHTML = 'Español';
+                
+    hideNotLangElements({lang: setLang});
+    showLangElements({lang: setLang});
 };
 
 
@@ -152,27 +163,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     langButtonEn.addEventListener("click", (event) => {
-        const currentLang = currentLangEl.value;
+        const currentLang = currentLangEl.lang;
         if (currentLang !== 'en'){
-            //$('[lang="es"]').toggle();
-            //$('[lang="en"]').toggle();
-            hideLangElements({lang: "es"});
-            showLangElements({lang: "en"});
-            currentLangEl.value = 'en';
+            document.documentElement.setAttribute("lang", 'en');
+            currentLangEl.setAttribute("lang", 'en');
             currentLangEl.innerHTML = 'English';
+            hideLangElements({lang: currentLang});
+            showLangElements({lang: "en"});
+            // Write the selected language on local storage
+            localStorage && (localStorage.selectedLang = "en");
         }
     });
 
 
     langButtonEs.addEventListener("click", (event) => {
-        const currentLang = currentLangEl.value;
+        const currentLang = currentLangEl.lang;
         if (currentLang !== 'es'){
-            //$('[lang="en"]').toggle();
-            //$('[lang="es"]').toggle();
-            hideLangElements({lang: "en"});
-            showLangElements({lang: "es"});
-            currentLangEl.value = 'es';
+            document.documentElement.setAttribute("lang", 'es');
+            currentLangEl.setAttribute("lang", 'es');
             currentLangEl.innerHTML = 'Español';
+            hideLangElements({lang: currentLang});
+            showLangElements({lang: "es"});
+            // Write the selected language on local storage
+            localStorage && (localStorage.selectedLang = "es");
         }
     });
 
