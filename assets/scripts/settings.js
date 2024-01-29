@@ -118,6 +118,15 @@ function calculateLanguageSettings(){
                 
     hideNotLangElements({lang: setLang});
     showLangElements({lang: setLang});
+
+    // Set new URL for language
+    /**
+    if (window.location){
+        const currentUrl = window.location.href;
+        const newUrl = currentUrl + '/' + setLang + '/';
+        window.location.replace(newUrl);
+    }
+    */
 };
 
 
@@ -172,6 +181,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
             showLangElements({lang: "en"});
             // Write the selected language on local storage
             localStorage && (localStorage.selectedLang = "en");
+
+            // Set new URL for language
+            /**
+            if (window.location){
+                const currentUrl = window.location.href;
+                const newUrl = currentUrl.slice(0, -3) + 'en/';
+                window.location.replace(newUrl);
+            }
+            */
         }
     });
 
@@ -186,6 +204,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
             showLangElements({lang: "es"});
             // Write the selected language on local storage
             localStorage && (localStorage.selectedLang = "es");
+
+            // Set new URL for language
+            /**
+            if (window.location){
+                const currentUrl = window.location.href;
+                const newUrl = currentUrl.slice(0, -3) + 'es/';
+                window.location.replace(newUrl);
+            }
+            */
         }
     });
 
