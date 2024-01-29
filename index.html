@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Favicons-->
-    <link rel="icon" type="image/vnd.microsoft.icon" href="assets/favicon/favicon.ico" sizes="48x48">
-    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/favicon/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-512x512.png" sizes="512x512">
+    <link rel="icon" id="favicon" type="image/vnd.microsoft.icon" href="assets/favicon/favicon-dark.ico" sizes="48x48">
+    <link rel="icon" id="favicon16" type="image/png" href="assets/favicon/favicon-16x16-dark.png" sizes="16x16">
+    <link rel="icon" id="favicon32" type="image/png" href="assets/favicon/favicon-32x32-dark.png" sizes="32x32">
+    <link rel="icon" id="favicon-apple" type="image/png" href="assets/favicon/apple-touch-icon-dark.png" sizes="180x180">
+    <link rel="icon" id="favicon192" type="image/png" href="assets/favicon/android-chrome-192x192-dark.png" sizes="192x192">
+    <link rel="icon" id="favicon512" type="image/png" href="assets/favicon/android-chrome-512x512-dark.png" sizes="512x512">
+    <title>Nicolás González</title>
     <!--CSS files-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/scripts/switch_theme.js"></script>
-    <title>Nicolás González</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/scripts/settings.js"></script>
 </head>
 <body class="text-body bg-main">
+    <button class="btn btn-position btn-style scroll-to-top" id="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button> 
     <!--Nav bar-->
     <nav class="navbar sticky-top navbar-expand-lg bg-nav text-title px-4">
         <div class="container-fluid">
@@ -38,7 +40,22 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <div class="dropdown dropdown-toggle-split bg-nav">
+                            <button class="btn dropdown-toggle bg-nav fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-language"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li id="current-lang" class="dropdown-item" value="en">English</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li id="lang-en" role="button" class="btn dropdown-item"">English</li>
+                                <li id="lang-es" role="button" class="btn dropdown-item">Español</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" lang="en">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#" lang="es">Inicio</a>
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="curriculum.html">Curriculum</a>

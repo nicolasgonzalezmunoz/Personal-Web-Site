@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="en"  data-bs-theme="dark">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--Favicons-->
-        <link rel="icon" type="image/vnd.microsoft.icon" href="assets/favicon/favicon.ico" sizes="48x48">
-        <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="assets/favicon/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="assets/favicon/android-chrome-512x512.png" sizes="512x512">
-        <!--CSS files-->
-        <link rel="stylesheet" href="assets/css/normalize.css">
-        <link rel="stylesheet" href="assets/css/index.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <title>Nicolás González - Certifications</title>
-    </head>
-<body class="bg-main-dark">
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Favicons-->
+    <link rel="icon" id="favicon" type="image/vnd.microsoft.icon" href="assets/favicon/favicon-dark.ico" sizes="48x48">
+    <link rel="icon" id="favicon16" type="image/png" href="assets/favicon/favicon-16x16-dark.png" sizes="16x16">
+    <link rel="icon" id="favicon32" type="image/png" href="assets/favicon/favicon-32x32-dark.png" sizes="32x32">
+    <link rel="icon" id="favicon-apple" type="image/png" href="assets/favicon/apple-touch-icon-dark.png" sizes="180x180">
+    <link rel="icon" id="favicon192" type="image/png" href="assets/favicon/android-chrome-192x192-dark.png" sizes="192x192">
+    <link rel="icon" id="favicon512" type="image/png" href="assets/favicon/android-chrome-512x512-dark.png" sizes="512x512">
+    <!--CSS files-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/switch-theme.js"></script>
+    <title>Certifications - Nicolás González</title>
+</head>
+<body class="text-body bg-main">
     <!--Nav bar-->
-    <nav class="navbar sticky-top navbar-expand-lg bg-nav-dark text-white">
+    <nav class="navbar sticky-top navbar-expand-lg bg-nav text-title px-4">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3 px-5" href="#">
+            <a class="navbar-brand fw-bold fs-3" href="#">
                 Nicolás González
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end fs-5" id="navbarToggler">
+            <div class="collapse navbar-collapse navbar-nav-scroll fs-5 justify-content-end" id="navbarToggler">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <button class="btn fs-5" aria-live="polite" title="Toggles light & dark"
+                        type="button" data-theme-toggle aria-label="Change to light theme" aria-hidden="true" id="switch-theme-button">
+                            <i class="fa-solid fa-moon" id="switch-theme-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="curriculum.html">Curriculum</a>
@@ -40,7 +47,7 @@
                         <a class="nav-link active" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"  aria-current="page" href="#">Certifications</a>
+                        <a class="nav-link active" href="#">Certifications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="https://www.linkedin.com/in/nicolas-gonzalezmu/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -59,7 +66,7 @@
         </div>
     </nav>
     <!--Main body-->
-    <main>
+    <main class="text-body">
         <section class="container justify-content-center my-4">
             <div class="row py-4">
                 <div class="col-12 col-lg-4 py-2">
@@ -67,9 +74,9 @@
                         <a href="https://cursos.desafiolatam.com/certificates/n09qxomzta" target="_blank">
                             <img src="assets/imgs/intro-webdev-desafio-latam-cert.jpg" alt="Introducción al Desarrollo Web Desafío Latam Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Introducción al Desarrollo Web<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Desafío Latam</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Introducción al Desarrollo Web<p>
+                            <p class="card-subtitle fs-5 mb-2">Desafío Latam</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://cursos.desafiolatam.com/certificates/n09qxomzta" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -80,9 +87,9 @@
                         <a href="https://cursos.desafiolatam.com/certificates/mmthueoauo" target="_blank">
                             <img src="assets/imgs/intro-data-desafio-latam-cert.jpg" alt="Introducción al Análisis de Datos Desafío Latam Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Introducción al Análisis de Datos con Python<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Desafío Latam</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Introducción al Análisis de Datos con Python<p>
+                            <p class="card-subtitle fs-5 mb-2">Desafío Latam</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://cursos.desafiolatam.com/certificates/mmthueoauo" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -93,9 +100,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-game-ai-and-reinforcement-learning" target="_blank">
                             <img src="assets/imgs/intro-game-kaggle.png" alt="Intro to Game AI and Reinforcement Learning Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Intro to Game AI and Reinforcement Learning<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Intro to Game AI and Reinforcement Learning<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-game-ai-and-reinforcement-learning" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -106,9 +113,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/machine-learning-explainability" target="_blank">
                             <img src="assets/imgs/explainability-kaggle-cert.png" alt="Machine Learning Explainability Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Machine Learning Explainability<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Machine Learning Explainability<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/machine-learning-explainability" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -119,9 +126,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/geospatial-analysis" target="_blank">
                             <img src="assets/imgs/geo-analysis-kaggle-cert.png" alt="Geospatial Analysis Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Geospatial Analysis<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Geospatial Analysis<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/geospatial-analysis" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -132,9 +139,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-ai-ethics" target="_blank">
                             <img src="assets/imgs/intro-ethics-kaggle-cert.png" alt="Intro to AI Ethics Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Intro to AI Ethics<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 title-text">Intro to AI Ethics<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-ai-ethics" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -145,9 +152,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/data-cleaning" target="_blank">
                             <img src="assets/imgs/cleaning-kaggle-cert.png" alt="Data Cleaning Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Data Cleaning<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Data Cleaning<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/data-cleaning" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -158,9 +165,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/time-series" target="_blank">
                             <img src="assets/imgs/time-series-kaggle-cert.png" alt="Time Series Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Time Series<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Time Series<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/time-series" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -171,9 +178,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/computer-vision" target="_blank">
                             <img src="assets/imgs/vision-kaggle-cert.png" alt="Computer Vision Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Computer Vision<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Computer Vision<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/computer-vision" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -184,9 +191,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-deep-learning" target="_blank">
                             <img src="assets/imgs/intro-deep-kaggle-cert.png" alt="Intro to Deep Learning Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Intro to Deep Learning<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Intro to Deep Learning<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-deep-learning" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -197,9 +204,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank">
                             <img src="assets/imgs/adv-sql-kaggle-cert.png" alt="Advanced SQL Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Advanced SQL<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Advanced SQL<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -210,9 +217,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-sql" target="_blank">
                             <img src="assets/imgs/intro-sql-kaggle-cert.png" alt="Intro to SQL Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Intro to SQL<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Intro to SQL<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-sql" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -223,9 +230,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/feature-engineering" target="_blank">
                             <img src="assets/imgs/feature-eng-kaggle-cert.png" alt="Feature Engineering Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Feature Engineering<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Feature Engineering<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/feature-engineering" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -236,9 +243,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/data-visualization" target="_blank">
                             <img src="assets/imgs/data-vis-kaggle-cert.png" alt="Data Visualization Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Data Visualization<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Data Visualization<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/data-visualization" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -249,9 +256,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intermediate-machine-learning" target="_blank">
                             <img src="assets/imgs/inter-ml-kaggle-cert.png" alt="Intermediate Machine Learning Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Intermediate Machine Learning<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Intermediate Machine Learning<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intermediate-machine-learning" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -262,9 +269,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/pandas" target="_blank">
                             <img src="assets/imgs/pandas-kaggle-cert.png" alt="Pandas Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Pandas<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Pandas<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/pandas" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -275,9 +282,9 @@
                         <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-machine-learning" target="_blank">
                             <img src="assets/imgs/intro-ml-kaggle-cert.png" alt="Intro to Machine Learning Kaggle Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Intro to Machine Learning<p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">Kaggle</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Intro to Machine Learning<p>
+                            <p class="card-subtitle fs-5 mb-2">Kaggle</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/intro-to-machine-learning" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -288,9 +295,9 @@
                         <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank">
                             <img src="assets/imgs/ml-codecamp-cert.png" alt="Machine Learning FreeCodeCamp Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Machine Learning with Python</p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">FreeCodeCamp</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Machine Learning with Python</p>
+                            <p class="card-subtitle fs-5 mb-2">FreeCodeCamp</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -301,9 +308,9 @@
                         <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank">
                             <img src="assets/imgs/data-codecamp-cert.png" alt="Data Analysis FreeCodeCamp Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Data Analysis with Python</p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">FreeCodeCamp</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Data Analysis with Python</p>
+                            <p class="card-subtitle fs-5 mb-2">FreeCodeCamp</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -314,9 +321,9 @@
                         <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/scientific-computing-with-python-v7" target="_blank">
                             <img src="assets/imgs/scientific-comp-codecamp-cert.png" alt="Scientific Computing FreeCodeCamp Certification" class="card-img-top">
                         </a>
-                        <div class="card-body bg-emphasis-dark">
-                            <p class="card-title fs-4">Scientific Computing with Python</p>
-                            <p class="card-subtitle text-body-secondary fs-5 mb-2">FreeCodeCamp</p>
+                        <div class="card-body bg-emphasis">
+                            <p class="card-title fs-4 text-title">Scientific Computing with Python</p>
+                            <p class="card-subtitle fs-5 mb-2">FreeCodeCamp</p>
                             <p class="card-text"></p>
                             <p class="text-center"><a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/scientific-computing-with-python-v7" target="_blank" class="btn btn-danger">See certification</a></p>
                         </div>
@@ -325,7 +332,7 @@
             </div>
         </section>
     </main>
-    <footer class="container-fluid bg-footer-dark text-center py-2 fs-5 mt-3">
+    <footer class="container-fluid bg-footer text-center py-2 fs-5 mt-3">
         <span class="my-2">Nicolás González. Data Science for everyone.</span>
     </footer>
 </body>

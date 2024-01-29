@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html lang="en"  data-bs-theme="dark">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--Favicons-->
-        <link rel="icon" type="image/vnd.microsoft.icon" href="assets/favicon/favicon.ico" sizes="48x48">
-        <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="assets/favicon/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="assets/favicon/android-chrome-512x512.png" sizes="512x512">
-        <!--CSS files-->
-        <link rel="stylesheet" href="assets/css/normalize.css">
-        <link rel="stylesheet" href="assets/css/index.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <title>Nicolás González - Curriculum</title>
-    </head>
-<body class="bg-main-dark">
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Favicons-->
+    <link rel="icon" id="favicon" type="image/vnd.microsoft.icon" href="assets/favicon/favicon-dark.ico" sizes="48x48">
+    <link rel="icon" id="favicon16" type="image/png" href="assets/favicon/favicon-16x16-dark.png" sizes="16x16">
+    <link rel="icon" id="favicon32" type="image/png" href="assets/favicon/favicon-32x32-dark.png" sizes="32x32">
+    <link rel="icon" id="favicon-apple" type="image/png" href="assets/favicon/apple-touch-icon-dark.png" sizes="180x180">
+    <link rel="icon" id="favicon192" type="image/png" href="assets/favicon/android-chrome-192x192-dark.png" sizes="192x192">
+    <link rel="icon" id="favicon512" type="image/png" href="assets/favicon/android-chrome-512x512-dark.png" sizes="512x512">
+    <!--CSS files-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/cb00c879e0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/switch-theme.js"></script>
+    <title>Curriculum - Nicolás González</title>
+</head>
+<body class="text-body bg-main">
     <!--Nav bar-->
-    <nav class="navbar sticky-top navbar-expand-lg bg-nav-dark text-white">
+    <nav class="navbar sticky-top navbar-expand-lg bg-nav text-title px-4">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3 px-5" href="#">
+            <a class="navbar-brand fw-bold fs-3" href="#">
                 Nicolás González
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end fs-5" id="navbarToggler">
+            <div class="collapse navbar-collapse navbar-nav-scroll fs-5 justify-content-end" id="navbarToggler">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <button class="btn fs-5" aria-live="polite" title="Toggles light & dark"
+                        type="button" data-theme-toggle aria-label="Change to light theme" aria-hidden="true" id="switch-theme-button">
+                            <i class="fa-solid fa-moon" id="switch-theme-icon"></i>
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Curriculum</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Curriculum</a>
                     </li>
                     <li class="nav.item">
                         <a class="nav-link active" href="projects.html">Projects</a>
@@ -59,17 +66,17 @@
         </div>
     </nav>
     <!--Main body-->
-    <main>
+    <main class="text-body">
         <!--Experience-->
         <section class="container">
-            <p class="fs-1 text-center text-white">Nicolás Ariel González Muñoz</p>
+            <p class="fs-1 text-center text-title p-4">Nicolás Ariel González Muñoz</p>
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <p class="fs-5">
-                        Kaggle: <a href="https://www.kaggle.com/nicolasgonzalezmunoz" target="_blank">@nicolasgonzalezmunoz</a>
+                        Kaggle: <a href="https://www.kaggle.com/nicolasgonzalezmunoz" target="_blank" class="link-info">@nicolasgonzalezmunoz</a>
                     </p>
                     <p class="fs-5">
-                        LinkedIn: <a href="https://www.linkedin.com/in/nicolas-gonzalezmu/" target="_blank">Nicolás Ariel González Muñoz</a>
+                        LinkedIn: <a href="https://www.linkedin.com/in/nicolas-gonzalezmu/" target="_blank" class="link-info">Nicolás Ariel González Muñoz</a>
                     </p>
                 </div>
                 <div class="col-12 col-lg-6 text-end">
@@ -84,7 +91,7 @@
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-white">
+            <p class="fs-2 text-center text-title">
                 Experience
             </p>
             <div>
@@ -185,13 +192,13 @@
                     </li>
                 </ul>
                 <p>
-                    The work developed led to the writing of a scientific article, which is currently published on Ecological Modelling: <a href="https://doi.org/10.1016/j.ecolmodel.2023.110449" target="_blank">https://doi.org/10.1016/j.ecolmodel.2023.110449</a>
+                    The work developed led to the writing of a scientific article, which is currently published on Ecological Modelling: <a href="https://doi.org/10.1016/j.ecolmodel.2023.110449" target="_blank" class="link-info">https://doi.org/10.1016/j.ecolmodel.2023.110449</a>
                 </p>
             </div>
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-white">Education</p>
+            <p class="fs-2 text-center text-title">Education</p>
             <div>
                 <div class="row">
                     <div class="col-12 col-lg-8 fs-5">
@@ -219,7 +226,7 @@
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-white">Knowledge & Skills</p>
+            <p class="fs-2 text-center text-title">Knowledge & Skills</p>
             <p class="fs-4">Machine Learning Models</p>
             <div class="container">
                 <p>
@@ -334,24 +341,24 @@
         </section>
         <hr>
         <section class="container">
-            <p class="fs-2 text-center text-white">Certifications</p>
+            <p class="fs-2 text-center text-title">Certifications</p>
             <ul class="fs-5">
                 <li>
-                    <a href="assets/docs/ielts-results.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a> IELTS Academic, Score: 7.0 (CEFR Level C1).
+                    <a href="assets/docs/ielts-results.pdf" target="_blank"><i class="fas fa-file-pdf link-info"></i></a> IELTS Academic, Score: 7.0 (CEFR Level C1).
                 </li>
                 <li>
-                    <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank"><i class="fas fa-link"></i></a> Data Analysis with Python.
+                    <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/data-analysis-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a> Data Analysis with Python.
                 </li>
                 <li>
-                    <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank"><i class="fas fa-link"></i></a>Machine Learning with Python.
+                    <a href="https://www.freecodecamp.org/certification/nicolas-gonzalezmu/machine-learning-with-python-v7" target="_blank"><i class="fas fa-link link-info"></i></a>Machine Learning with Python.
                 </li>
                 <li>
-                    <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank"><i class="fas fa-link"></i></a> Advanced SQL.
+                    <a href="https://www.kaggle.com/learn/certification/nicolasgonzalezmunoz/advanced-sql" target="_blank"><i class="fas fa-link link-info"></i></a> Advanced SQL.
                 </li>
             </ul>
         </section>
     </main>
-    <footer class="container-fluid bg-dark-gray text-center py-2 fs-5 mt-3 bg-blue-dark">
+    <footer class="container-fluid bg-footer text-center py-2 fs-5 mt-3">
         <span class="my-2">Nicolás González. Data Science for everyone.</span>
     </footer>
 </body>
