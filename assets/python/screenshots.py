@@ -1,12 +1,14 @@
 import os
 import asyncio
+from PIL import Image
 from selenium import webdriver
 from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.common.by import By
 
 
 async def take_kaggle_screenshot(
-    url: str, filepath: os.PathLike, opts: FirefoxOptions
+    url: str, filepath: os.PathLike, opts: FirefoxOptions, *,
+    size: tuple[int, int] = (600, 400)
     ) -> None:
 
     # Initialize navigator
@@ -30,6 +32,11 @@ async def take_kaggle_screenshot(
 
     # Exit browser
     driver.quit()
+
+    # Open image with PIL and save as thumbnail
+    with Image.open(filepath) as im:
+        im.thumbnail(size)
+        im.save(filepath, "PNG")
 
 
 async def take_kaggle_screenshots(
@@ -55,6 +62,7 @@ async def take_kaggle_screenshots(
 
 urls = [
     # Current projects
+    "https://www.kaggle.com/code/nicolasgonzalezmunoz/interactive-visualizations-plotly-datashader",
     "https://www.kaggle.com/code/nicolasgonzalezmunoz/underfitting-overfitting-and-regularization",
     "https://www.kaggle.com/code/nicolasgonzalezmunoz/ml-the-statistician-way-basics/notebook",
     "https://www.kaggle.com/code/nicolasgonzalezmunoz/cross-validation-dataset-split-strategies",
@@ -65,6 +73,7 @@ urls = [
 
 filenames = [
     # Current projects
+    "interactive-viz-project.png",
     "overfitting-project.png",
     "statistics-project.png",
     "split-project.png",
